@@ -1,0 +1,103 @@
+/* CSS Document */
+
+#services-header {
+	width: 5.5em;
+	margin-left: -5em;
+}
+
+#services-slogan {
+	margin-top: 2em;
+}
+
+/* images */
+.services-img-container {
+	position:relative;
+	margin-top: 2em;
+	height: 200px;
+	overflow:hidden;
+}
+
+.services-img,
+.services-img-bw {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.services-img-bw {
+	z-index:2;
+}
+
+.services-img-title {
+	position:absolute;
+	top:0;
+	left:0px;
+	padding: 1em 0;
+	z-index: 3;
+	width: 15em;
+}
+
+/* animatable content */
+.animate-outer {
+	overflow:hidden;
+}
+
+.animate-inner {
+	width: 96%;
+	padding: 1em 2%;
+	visibility: hidden
+}
+
+.services-content-section {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.services-content-header {
+	margin-left: .5em;
+}
+
+.services-content-img {
+	margin-top: .3em;
+}
+
+.services-content-subheader {
+	margin: .9em 0 0 .7em;
+}
+
+#services-sophomore-enjoy {
+	margin-top: .7em;
+}
+
+.services-seniors-container {
+	width:37%;
+}
+
+.services-seniors-container.left {
+	margin-left: 10%;
+	margin-right: 3%;
+}
+
+.services-seniors-container.right {
+	margin-right: 10%;
+	margin-left: 3%;
+}
+
+.services-seniors-img {
+	margin: 1em auto 0 auto;
+	display:block;
+}
+
+.services-seniors-header {
+	margin-top: .3em;
+}
+
+.services-question {
+	margin: 1.4em 0 0 1.5em;
+}
+
+.services-answer {
+	margin: .3em 0 0 3.5em;
+}
+
+

@@ -1,0 +1,37 @@
+<?php
+/* CONTACT */
+$this->headLink()->prependStylesheet($this->baseUrl() . '/css/contact.css');
+$this->headScript()->appendFile($this->baseUrl() . '/js/contact.js');
+$this->headScript()->appendFile($this->baseUrl() . '/js/ZeroClipboard.min.js');
+?>
+
+<?php
+$this->placeholder('absolute')->captureStart();
+
+echo "<div id='contact-dropdown' class='dark-back'>";
+echo	"<p id='contact-dropdown-copy' class='white clear contact-dropdown-option pointer width-100'>copy</p>";
+echo	"<a href='mailto:ellenwhite1@gmail.com' class='white clear contact-dropdown-option width-100' id='contact-dropdown-email'>email</a>";
+echo "</div>";
+
+$this->placeholder('absolute')->captureEnd();
+?>
+
+<?php
+echo $this->partial('partials/global/separator.phtml', array('title'  => 'contact',
+															 'id'	  => 'contact-header'));
+ ?>
+
+
+<div class='clear' id='contact-container'>
+	<img src='/images/contact/ucla.jpg' id='contact-img' class='dropshadow' />
+    
+    <div id='contact-text' class='red-back clear'>
+    	<p class='left largest-text white'>Ellen White</p>
+        <p class='clear larger-text white pointer' id='contact-email'>ellenwhite1@gmail.com</a>
+        <p class='clear smaller-text white contact-subtext'>phone:</p>
+        <p class='left white larger-text'>(415) 499-5763</p>
+        <p class='clear smaller-text white contact-subtext'>fax:</p>
+        <p class='left white larger-text' id='contact-fax'>(415) 499-5761</p>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class='clear width-100 testimonials-outer-container'>
+
+<?php
+	if ($this->imageLocation == 'left') {
+		$textClass = 'right';
+		$imgClass = 'left';
+	} else {
+		$textClass = 'left';
+		$imgClass = 'right';
+	}
+
+	$text  = "<div class='" . $textClass . " testimonials-text-container'>";
+	$text .= "<p class='red left testimonials-name smaller-text'>" . ucwords($this->name) . " attended</p>";
+	$text .= "<p class='red left largest-text arial bold'>&nbsp;" . $this->school . "</p>";
+	$text .= "<img src='/images/testimonials/open_quote.png' class='clear testimonials-quote'>
+			  <p class='clear testimonials-text'>
+			  " . $this->text . "
+				<img src='/images/testimonials/close_quote.png' class='right'></p>";
+	$text .= "</div>";
+	
+	$img   = "<img src='/images/testimonials/" . $this->image . "' class='" . $imgClass . " dropshadow' style='width:250px;height:200px; background:#e9e9e9;'/>";
+
+	echo $text . $img;
+?>
+
+</div>

@@ -1,0 +1,81 @@
+#home-slogan {
+	margin-top: 2em;
+	font-size: 1.7em;
+}
+
+/* slider */
+#home-slider-container {
+	height: 400px;
+	position:relative;
+	margin-top: 2em;
+	border: solid 1px #333;
+}
+
+.home-slider {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: 2;
+}
+
+.home-slider.current {
+	z-index: 10;
+}
+
+.home-slider.next {
+	z-index: 5;
+}
+
+#home-slider-indicator-container {
+	position:absolute;
+	top: 10px;
+	right: 20px;
+	z-index:20;
+}
+
+.home-indicator {
+	background: url("/images/home/indicators.png");
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 17px;
+	cursor:pointer;
+}
+
+.home-indicator.current {
+	background-position: 0px -19px;
+}
+
+/* words */
+
+#home-words-container {
+	margin-top: 3em;
+}
+
+.home-word-container {
+	width: 23%;
+	padding-right: 2%;
+}
+
+.home-word-header {
+	font-size: 1.2em;
+}
+
+.home-word-text {
+	margin-top: .5em;
+}
+
+#home-services {
+	font-size: 1.2em;
+	margin: 1em 0 0 21.3em;
+	padding-left: 2em;
+	padding-right:2em;
+}
+
+/* mission statement */
+#home-mission-container {
+	margin-top: 1em;
+}
+
+#mission-statement {
+	margin-top: .5em;
+}

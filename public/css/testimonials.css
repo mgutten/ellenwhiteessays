@@ -1,0 +1,40 @@
+/* CSS Document */
+
+.testimonials-outer-container {
+	margin-top: 4em;
+}
+
+.testimonials-name {
+	margin-top: 1.3em;
+	margin-left: 3.8em;
+}
+
+.testimonials-text-container {
+	width: 66%;
+}
+
+.testimonials-text {
+	margin: -1em 0 0 3em;
+}
+
+.testimonials-quote {
+	margin-top: 1em;
+}
+
+
+#testimonials-header {
+	width: 7.4em;
+	margin-left: -5em;
+}
+
+.tesimonials-other-schools-container {
+	width: 12em;
+}
+
+#testimonials-other-schools {
+	margin:1em 0 0 15em;
+}
+
+#tesimonials-other-schools-subheader {
+	margin-top: 4em;
+}

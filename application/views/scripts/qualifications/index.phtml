@@ -1,0 +1,30 @@
+<?php
+/* QUALIFICATIONS */
+$this->headLink()->prependStylesheet($this->baseUrl() . '/css/qualifications.css');
+?>
+
+<?php
+echo $this->partial('partials/global/separator.phtml', array('title'  => 'qualifications',
+															 'id'	  => 'qualifications-header'));
+?>
+<div class='width-100 clear'>
+	<img src='/images/qualifications/portrait.jpg' id='qualifications-img' class='dropshadow' />
+</div>
+
+<p class='larger-text clear width-100 center' id='qualifications-name'>Ellen White</p>
+<ul class='clear' id='qualifications-container'>
+	<?php
+	$qualifications = array('BA in English and Art History, University of Pennsylvania',
+							'Regular essay workshops in senior English classes',
+							'Mentor and scholarship application reader, 10,000 Degrees',
+							'Seminar presenter in College Bound series at the Osher Marin JCC',
+							'Alumni interviewer, University of Pennsylvania',
+							'Guest Lecturer, UC Berkeley Extension College and Career Planning Course');
+						
+	foreach ($qualifications as $text) {
+		echo "<li class='clear qualification'>" . $text . "</li>";
+	}
+
+	?>
+
+</ul>

@@ -1,0 +1,106 @@
+<?php
+$controller = strtolower(Zend_Controller_Front::getInstance()->getRequest()->getControllerName());
+
+$title = ($controller == 'index' ? 'College Admission Essays' : ucwords($controller));
+
+$this->headTitle()->setSeparator(' | ');
+$this->headTitle()->exchangeArray(array('Ellen White',$title));
+/*
+if (!$this->noDefaultHeadTitle) {
+	// Allow override of appended Sportfast with $this->noDefaultHeadTitle = true
+	$this->headTitle()->append('Sportfast');
+}
+*/
+//$this->setEncoding('UTF-8');
+//echo $this->doctype('XHTML1_TRANSITIONAL') . PHP_EOL; ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset='utf-8' />
+<?php
+		$this->headMeta()->setName('keywords', 'ellen white, ellen j white, college essay advisor, college admission essay, admissions essay, help college admission essay, ellen white essays');
+		echo $this->headMeta()->setName('description', 'With 20+ years of college admission experience, Ellen White helps students write the best college admission essays possible.');
+ 		echo $this->headTitle() . PHP_EOL;
+ 		echo $this->headLink()->prependStylesheet($this->baseUrl() . '/css/global.css') . PHP_EOL;
+		
+		$this->headScript()->prependFile($this->baseUrl() . '/js/global.js');
+		
+
+		echo $this->headScript()->prependFile('http://code.jquery.com/jquery-latest.min.js') . PHP_EOL;
+								
+ ?>
+</head>
+<body onunload=''>
+<?php
+//placeholder for all absolutely placed elements
+echo $this->placeholder('absolute');
+
+?>
+<div class='centered-body body-wrapper'>
+	<div class='clear width-100'>
+	<div id='header-container' class='clear'>
+        <a href='/'><img src='/images/global/logo.png' class='clear' /></a>
+        
+        <?php
+			$nav = array('home',
+						 'services',
+						 'testimonials',
+						 'qualifications',
+						 'contact');
+			
+			$reversed = array_reverse($nav);
+			
+			foreach ($reversed as $section) {
+				$class = 'right header-section';
+				$href = $section;
+				
+				if ($section == $controller ||
+					($section == 'home' && $controller == 'index')) {
+					// current page, show as selected
+					$class .= ' header-section-selected';
+					
+				}
+				
+				if ($section == 'home') {
+					$href = '';
+				}
+				
+				echo "<a href='/" . $href . "' class='" . $class . "'>" . $section . "</a>";
+			}
+		?>
+				
+    </div>
+
+
+<?php
+
+echo $this->layout()->content . PHP_EOL;
+
+?>
+</div>
+</div>
+
+<div class='push'></div>
+</div>
+<div class='footer'>
+    <div class='centered-body'>
+		<?php 
+			foreach ($nav as $text) {
+				if ($text != $nav[0]) {
+					echo "<p class='left light footer-separator smaller-text'>&nbsp;|&nbsp;</p>";
+				}
+				if ($text == 'home') {
+					$src = '';
+				} else {
+					$src = $text;
+				}
+				echo "<a href='/" . $src . "' class='left footer-nav light smaller-text'>" . $text . "</a>";
+			}
+		?>
+        
+        <p class='right footer-nav light smaller-text'>&copy;<?php echo date('Y');?> Ellen White. All Rights Reserved</p>
+	</div>
+</div>
+
+</body>
+</html>

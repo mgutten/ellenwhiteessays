@@ -1,0 +1,252 @@
+/* CSS Document */
+@font-face {
+	font-family: 'Avenir';
+	src: url('/webfonts/280793_0_0.eot');
+	src: url('/webfonts/280793_0_0.eot?#iefix') format('embedded-opentype'),url('/webfonts/280793_0_0.woff') format('woff'),url('/webfonts/280793_0_0.ttf') format('truetype');
+}
+
+p, div, span, input, textarea, a {
+	font-family: 'Avenir', arial, helvetica;
+	font-size: 1em;
+	color: #444;
+}
+
+* {
+	margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+	height:100%;
+}
+
+img {
+	border:none;
+}
+
+body {
+	background: #f8f4e9;
+}
+
+
+.centered-body {
+	width:61.25em;
+	margin:0 auto;
+	padding-bottom: 2em;
+}
+
+.dropshadow {
+	-moz-box-shadow:    1px 1px 4px 0px rgba(0,0,0,0.4); 
+ 	-webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.4);
+  	box-shadow:         1px 1px 4px 0px rgba(0,0,0,0.4);
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.medium {
+	color: #777;
+}
+
+.light {
+	color: #aaa;
+}
+
+.red {
+	color: #d0142a;
+}
+
+.red-back {
+	background: #d0142a;
+}
+
+.white {
+	color: #fff;
+}
+
+.arial {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+/* header */
+#header-container {
+	width:100%;
+	margin-top: 3em;
+}
+
+.header-section {
+	float:right;
+	text-align:center;
+	padding: .5em 1em;
+	text-decoration:none;
+	margin-top: .5em
+}
+
+.header-section:hover {
+	background: #e9e9e9;
+}
+
+.header-section-selected {
+	background: #d0142a;
+	color: #fff;
+}
+
+.header-section-selected:hover {
+	color: #fff;
+	background:#d0142a;
+}
+
+
+/* force footer to bottom of page */
+.centered-body.body-wrapper {
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -4.5em;
+	padding-bottom: 0;
+}
+
+.footer, .push {
+	clear: both;
+	height: 1.5em; 
+}
+
+.footer {
+	background: #444;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
+	background-image: -webkit-linear-gradient(top, #555, #333); 
+	background-image: -moz-linear-gradient(top, #555, #333);
+	background-image: -ms-linear-gradient(top, #555, #333);
+	background-image: -o-linear-gradient(top, #555, #333);
+}
+
+.footer > .centered-body {
+	padding: 0;	
+}
+
+.push {
+	height:3em;
+}
+
+.footer-nav {
+	margin-top: .3em;
+}
+
+.footer-separator {
+	margin-top: .5em;
+}
+
+/* end force footer */
+
+
+/* positioning */
+.clear {
+	float:left;
+	clear:both;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.center {
+	text-align: center;
+}
+
+.margin-top {
+	margin-top: .4em;
+}
+
+/* font sizes */
+.smaller-text {
+	font-size: .8em;
+}
+
+.larger-text {
+	font-size: 1.35em;
+}
+
+.largest-text {
+	font-size: 2em;
+}
+
+
+/* separator for titles/headers */
+.separator {
+	width: 100%;
+	background: url('/images/global/separator.png');
+	background-position: 0px 50%;
+	background-repeat: repeat-x;
+	position:relative;
+	margin-top: 2em;
+}
+
+.separator-header {
+	position:relative;
+	top: 0;
+	left: 50%;
+	background: #f8f4e9;
+	padding: 0 2em;
+	font-size: 1.75em;
+}
+
+#mission-header {
+	width:10.3em;
+	margin-left: -7.2em;
+	font-size: 1.4em;
+}
+	
+/* buttons */
+.red-button,.dark-button {
+	cursor: pointer;
+	/*border-radius: 5px;
+	-moz-border-radius: 5px;*/
+	border: 1px solid #111;
+	background: #d0142a;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e7233a), to(#d0142a));
+	background-image: -webkit-linear-gradient(top, #e7233a, #d0142a); 
+	background-image: -moz-linear-gradient(top, #e7233a, #d0142a);
+	background-image: -ms-linear-gradient(top, #e7233a, #d0142a);
+	background-image: -o-linear-gradient(top, #e7233a, #d0142a);
+	padding: .05em .9em 0 1em;
+	text-align:center;
+	color: #fff;
+	text-decoration:none;
+}
+
+.dark-button {
+	background: #444;
+	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
+	background-image: -webkit-linear-gradient(top, #555, #333); 
+	background-image: -moz-linear-gradient(top, #555, #333);
+	background-image: -ms-linear-gradient(top, #555, #333);
+	background-image: -o-linear-gradient(top, #555, #333);*/
+	color: #fff;
+}
+
+.dark-button:hover{
+	background:#333;
+	color: #ccc;
+}
+
+.red-button:hover {
+	background: #c9182d;
+	color: #fafafa;
+}

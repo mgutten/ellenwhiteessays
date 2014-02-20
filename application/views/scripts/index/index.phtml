@@ -1,0 +1,71 @@
+<?php
+/* HOME */
+$this->headLink()->prependStylesheet($this->baseUrl() . '/css/home.css');
+$this->headScript()->appendFile($this->baseUrl() . '/js/home.js');
+?>
+<header class='clear width-100 center' id='home-slogan'>
+    BRINGING YOUR VOICE TO COLLEGE ADMISSION ESSAYS
+</header>
+
+<div class='clear width-100 dropshadow' id='home-slider-container'>
+	<a href='/services' class='clear width-100'>
+	<?php
+    for ($i = 1; $i <= 4; $i++) {
+		$class = 'home-slider ';
+		if ($i == 1) {
+			$class .= 'current';
+		} elseif ($i == 2) {
+			$class .= 'next';
+		}
+		
+        echo "<img src='/images/home/slider/" . $i . ".jpg' id='home-slider" . $i . "' class='" . $class . "'/>";
+	}
+	?>
+    </a>
+    
+    <div class='left' id='home-slider-indicator-container'>
+    	<div class='left home-indicator current'></div>
+        <div class='left home-indicator'></div>
+        <div class='left home-indicator'></div>
+        <div class='left home-indicator'></div>
+    </div>
+</div>
+
+<div class='clear width-100' id='home-words-container'>
+	
+    <?php
+		$words = array('inspiration' => "A story you might think is small, can impact an admissions officer in a big way.",
+					   'structure'	 => "I provide the structure that each application essay requires.",
+					   'clarity'	 => "You have approximately 500 words to stand out.  Make them count.",
+					   'voice'		 => "Give color and context through the telling of your story.");
+		
+		$output = '';			   
+		foreach ($words as $word => $text) {
+			$output .= "<div class='left home-word-container'>";
+			$output .=		"<p class='clear home-word-header'>" . strtoupper($word) . "</p>";
+			$output .=		"<p class='clear home-word-text medium'>" . $text . "</p>";
+			$output .= "</div>";
+		}
+		
+		echo $output;
+		?>
+    
+</div>
+
+
+<a href='/services' class='clear dark-button dropshadow' id='home-services'>Services</a>
+
+
+<div class='clear width-100' id='home-mission-container'>
+	<?php
+	echo $this->partial('partials/global/separator.phtml', array('title'  => 'mission statement',
+																 'id'	  => 'mission-header'));
+	?>
+    
+    <p class='clear' id='mission-statement'>
+    	The college application essay is more important than ever in determining the admission decision.  It is often the only opportunity for students to present their personal 
+        stories and passions to give the reader a sense of who they are beyond GPA and test scores.  
+        <span class='red'>I assist students in finding what is unique about their history, experiences or talents, and help give a voice to the narrative in an articulate, engaging and natural style.</span>
+    </p>
+
+</div>

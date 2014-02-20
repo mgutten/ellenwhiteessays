@@ -1,0 +1,76 @@
+<?php
+/* TESTIMONIALS */
+$this->headLink()->prependStylesheet($this->baseUrl() . '/css/testimonials.css');
+?>
+
+<?php
+echo $this->partial('partials/global/separator.phtml', array('title'  => 'testimonials',
+															 'id'	  => 'testimonials-header'));
+
+
+echo $this->partial('partials/testimonials/quote.phtml', array('name' 	=> 'davey',
+															   'school' => 'Stanford',
+															   'text'	=> "From start to finish, Ellen was supportive every step of the way.  She waded through my scattered ideas and helped me determine what I really wanted to write about, rather than handing me an official line on what colleges like to hear. While many people can edit punctuation and grammar, Ellen really understands the heart of each essay and edited with an eye for preserving that essence.  Above all else, her positive attitude meant that I always looked forward to our talks.",
+															   'image' 	=> 'carl.jpg',
+															   'imageLocation' => 'left'));
+
+															   
+echo $this->partial('partials/testimonials/quote.phtml', array('name' 	=> 'janet',
+															   'school' => 'Pitzer',
+															   'text'	=> "Ellen demystifies the college essay by developing your voice and bringing your thoughts and ideas into clear focus.  She made it possible for me to express myself just as I had always intended.  My ideas were fully realized thanks to Ellen's brainstorming sessions.  After working with her, I was able to confidently send in my essays, feeling I had submitted my best work.",
+															   'image' 	=> 'janet.jpg',
+															   'imageLocation' => 'left'));
+															   
+
+echo $this->partial('partials/testimonials/quote.phtml', array('name' 	=> 'carl',
+															   'school' => 'USC',
+															   'text'	=> "In a world where I had 500 words to explain four years of my life, it was more than worthwhile to have Ellen make sure I was writing what I most wanted to say.  She has a clear understanding of what colleges are looking for and helped make sure I didn't waste one of those 500 words. She is practical and knowledgeable.  I showed her what I wrote, she told me what it said, I told her what I meant, and she assisted me with a final product that was exactly what I wanted to submit.",
+															   'image' 	=> 'davey.jpg',
+															   'imageLocation' => 'left'));
+
+$otherSchools = array('NYU',
+					  'UCLA',
+					  'UCD',
+					  'UCSD',
+					  'UC Berkeley',
+					  'Emerson',
+					  'Cornell',
+					  'Harvard',
+					  'Middlebury',
+					  'Dartmouth',
+					  'Tufts',
+					  'Rice',
+					  'Hopkins',
+					  'Bowdoin',
+					  'Northwestern',
+					  'Syracuse',
+					  'Boston College',
+					  'Boston University',
+					  'Wake Forest',
+					  'Claremont Consortium',
+					  'And many others...');
+
+$counter = 0;
+$output  = "<div class='left tesimonials-other-schools-container'>";			  
+foreach ($otherSchools as $school) {
+	if ($counter == 7) {
+		// Allow 7 schools per line
+		$output .= "</div>";
+		$output .= "<div class='left tesimonials-other-schools-container'>";
+		$counter = 0;
+	}
+	
+	$output .= "<p class='clear red'>" . $school . "</p>";
+	
+	$counter++;
+}
+$output .= "</div>";
+
+echo "<p class='clear width-100 center' id='tesimonials-other-schools-subheader'>Other schools where Ellen's students were accepted:</p>";
+
+echo "<div class='clear' id='testimonials-other-schools'>";
+echo $output;
+echo "</div>";
+					  
+					  
+					  
